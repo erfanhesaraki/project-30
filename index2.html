@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style2.css">
+</head>
+
+<body>
+    <div>
+        <h2 id="demo"></h2>
+    </div>
+    <div id="text">
+        <h1></h1>
+    </div>
+
+
+    <script>
+
+        setInterval(function () {
+            let x = new Date().toLocaleTimeString('fa')
+            document.getElementById('demo').innerHTML = x
+        }, 1000);
+        let _h = new Date().getHours()
+        let _h1 = document.querySelector('#text>h1')
+        _h1.classList.add('anime')
+
+        if (_h >= 0 && _h < 6) {
+            _h1.innerHTML = 'Good Midnight'
+        } else if (_h >= 6 && _h < 9) {
+            _h1.innerHTML = 'Good Morning '
+        } else if (_h >= 9 && _h < 12) {
+            _h1.innerHTML = 'Good Noon '
+        } else if (_h >= 12 && _h < 15) {
+            _h1.innerHTML = 'Good Afternoon '
+        } else if (_h >= 15 && _h < 19) {
+            _h1.innerHTML = 'Good Evening '
+        } else if (_h >= 19 && _h <= 23) {
+            _h1.innerHTML = 'Good Night '
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
